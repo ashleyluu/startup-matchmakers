@@ -1,36 +1,23 @@
-/*
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
-Developer @GA in NYC
-*/
 
+body {
+  background-image: url('/images/pattern.svg');
 
+}
 
-
-@import 'base/base.css';
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-@import 'comp/nav.css';
-@import 'comp/slider.css';
-@import 'comp/gallery.css';
-@import 'comp/single-photo.css';
-@import 'comp/search.css';
-@import 'comp/contact.css';
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+#container {
+  width: 350px;
+  height: 200px;
+  background-color: grey;
+  margin: 0 auto;
+}
 
 .username {
 
-};
+}
 
 .password {
 
-};
+}
 
 .button {
 
