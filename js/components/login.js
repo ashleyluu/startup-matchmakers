@@ -5,6 +5,7 @@ var loginForm = function() {
   this.button = document.createElement ('div');
   this.footer = document.createElement ('footer');
 
+
   this.element.appendChild(this.username);
   this.element.appendChild(this.password);
   this.element.appendChild(this.button);
@@ -20,5 +21,7 @@ var loginForm = function() {
   this.button.innerHTML = '<button type="submit" value="Submit">login</button>';
   this.footer.innerHTML = '<div class="footer">Dont have an account?</div>'
 
+
   document.getElementById('container').appendChild(this.element);
+  
 };
