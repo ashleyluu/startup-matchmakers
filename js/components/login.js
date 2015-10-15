@@ -16,12 +16,15 @@ var loginForm = function() {
   this.button.classList.add('button');
   this.footer.classList.add('footer');
 
-  this.username.innerHTML = '<input type="text">';
-  this.password.innerHTML = '<input type="text">';
+  this.username.innerHTML = '<input type="text" placeholder="username">';
+  this.password.innerHTML = '<input type="password" placeholder="password">';
   this.button.innerHTML = '<button type="submit" value="Submit">login</button>';
-  this.footer.innerHTML = '<div class="footer">Dont have an account?</div>'
+  this.footer.innerHTML = '<div class="footer"><a href="login.html">Dont have an account?</a></div>';
 
+  //this.button.addEventListener('click', function(){
 
+  //}
+  console.log('hi')
   document.getElementById('container').appendChild(this.element);
-  
+
 };
