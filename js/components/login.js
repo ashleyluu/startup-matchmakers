@@ -16,15 +16,28 @@ var loginForm = function() {
   this.button.classList.add('button');
   this.footer.classList.add('footer');
 
-  this.username.innerHTML = '<input type="text" placeholder="username">';
-  this.password.innerHTML = '<input type="password" placeholder="password">';
+  this.username.innerHTML = '<input type="text" id="name" placeholder="username">';
+  this.password.innerHTML = '<input type="password" id="pass" placeholder="password">';
   this.button.innerHTML = '<button type="submit" value="Submit">login</button>';
   this.footer.innerHTML = '<div class="footer"><a href="login.html">Dont have an account?</a></div>';
 
-  //this.button.addEventListener('click', function(){
+  this.button.addEventListener('click', function(){
+    var formName = document.getElementById('name').value;
+    var formPassword = document.getElementById('pass').value;
 
-  //}
-  console.log('hi')
+  var options = {
+    name: formName,
+    pass: formPassword
+  };
+
+  var blah = new xhrHandler();
+  var verify = blah.request('GET','http://www.omdbapi.com/?t=frozen');
+  verify.then(function(data){
+      console.log(data);
+  });
+
+  });
+  //console.log('hi')
   document.getElementById('container').appendChild(this.element);
 
 };
