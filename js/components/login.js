@@ -31,10 +31,12 @@ var loginForm = function() {
   };
 
   var blah = new xhrHandler();
-  var verify = blah.request('GET','http://www.omdbapi.com/?t=frozen');
-  verify.then(function(data){
-      console.log(data);
-  });
+  blah.request('POST','http://vvvvvv.club/api/login',options).then(function(res){
+    if(res === 200){
+    console.log(res);
+  }
+  })
+
 
   });
   //console.log('hi')
