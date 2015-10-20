@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  height: 100px;
+  color: #BC261D;
+}
+
+#nav {
+  width: 20%;
+
+}
+
+#gallery-container {
+    background-image: url('/images/pattern.svg');
+    height: 500px;
+    width: 80%;
+}
+
+header h1 {
+  display: inline;
+}
+
+header h3 {
+  display: inline;
+  float: right;
+  margin-right: 20px;
+
+}
