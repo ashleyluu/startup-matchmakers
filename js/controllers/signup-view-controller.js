@@ -1,1 +1,1 @@
-var signupForm = new signupForm();
+var newSignup = new signupForm();
