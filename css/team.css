@@ -11,6 +11,9 @@ header {
 
 #gallery-container {
     background-image: url('/images/pattern.svg');
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 500px;
     width: 80%;
 }
