@@ -19,7 +19,7 @@ var signupForm = function() {
   this.element.appendChild(this.email);
   this.element.appendChild(this.username);
   this.element.appendChild(this.password);
-  this.element.appendChild(this.firstName;
+  this.element.appendChild(this.firstName);
   this.element.appendChild(this.lastName);
   this.element.appendChild(this.button);
   this.element.appendChild(this.footer);
