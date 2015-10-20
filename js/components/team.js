@@ -52,3 +52,5 @@ var Gallery = function(){
 document.getElementById('gallery-container').appendChild(this.gallery);
 
 };
+
+Gallery.prototype.listUser.
