@@ -26,16 +26,19 @@ var loginForm = function() {
     var formPassword = document.getElementById('pass').value;
 
   var options = {
-    name: formName,
-    pass: formPassword
+    username: formName,
+    password: formPassword
   };
 
-  var blah = new xhrHandler();
-  blah.request('POST','http://vvvvvv.club/api/login',options).then(function(res){
-    if(res === 200){
-    console.log(res);
-  }
-  })
+var request = $http('http://vvvvvv.club/api/login').post(options);
+// console.dir(request)
+request.then(function(response){
+  console.log(response)
+  window.location.href = "http://localhost:8080/views/team.html"
+    //   if(response === 200){
+    //   console.log(response);
+    // }
+});
 
 
   });
