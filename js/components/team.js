@@ -33,5 +33,22 @@ var teamNameController = function(){
 teamNameController.prototype.addList = function(teamName){
   var teamList
 
+};
+
+
+
+
+
+
+//gallery-container
+var Gallery = function(){
+  this.gallery = document.createElement('div');
+  this.ul = document.createElement('ul');
+
+
+  this.gallery.classList.add('gallery');
+  this.gallery.appendChild(this.ul);
+
+document.getElementById('gallery-container').appendChild(this.gallery);
 
 };
