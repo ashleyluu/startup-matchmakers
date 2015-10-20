@@ -1,6 +1,5 @@
 
 body {
-  background-image: url('/images/pattern.svg');
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   margin-top: 0px;
@@ -16,6 +15,7 @@ header {
   text-align: center;
   background: #DCE0D9;
   margin-top: 0;
+  font-size: 30px;
 }
 
 h1 {
@@ -24,82 +24,4 @@ h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   margin-top: 0px;
-}
-
-#meetMatch {
-  float: right;
-  width: 100%;
-  margin-top: 4%;
-}
-
-#matchContent {
-  float: right;
-  width: 32%;
-  padding-bottom: 3%;
-  margin-right: 3%;
-  color: #DCE0D9;
-}
-
-#meetMatch h1 {
-  color: #DCE0D9;
-}
-
-#meetMatch h3 {
-  display: inline-block;
-  padding-right: 5px;
-  background: #BC261D;
-  width: 35%;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  text-align: center;
-  border-radius: 4px;
-  margin-right: 20px;
-}
-
-#meetMatch h3 a {
-  text-decoration: none;
-  color: #DCE0D9;
-}
-
-
-#tagLine {
-  clear: both;
-  background:#FFFFFF;
-  width: 100%;
-  height: 15%;
-  padding-top: 0.75%;
-  padding-bottom: 1%;
-}
-
-#tagLine h1 {
-  text-align: center;
-  color: black;
-}
-
-#createProfile {
-  float: left;
-  width: 30%;
-  padding-left: 3%;
-}
-
-#findDeveloper {
-  float: right;
-  width: 30%;
-  padding-right: 3%;
-}
-
-#findDesigner {
-  float: right;
-  width: 30%;
-  padding-right: 3%;
-}
-
-footer {
-  position: fixed;
-  width: 100%;
-  height: 10%;
-  clear: both;
-  margin-top: 30%;
-  text-align: center;
-  background: #DCE0D9;
 }
