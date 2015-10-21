@@ -18,7 +18,7 @@ var loginForm = function() {
 
   this.username.innerHTML = '<input type="text" id="name" placeholder="username">';
   this.password.innerHTML = '<input type="password" id="pass" placeholder="password">';
-  this.button.innerHTML = '<button type="submit" value="Submit">login</button>';
+  this.button.innerHTML = '<button type="submit" id="loginButton" value="Submit">login</button>';
   this.footer.innerHTML = '<div class="footer"><a href="login.html">Dont have an account?</a></div>';
 
   this.button.addEventListener('click', function(){
