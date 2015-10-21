@@ -6,6 +6,10 @@ header {
 
 #nav {
   width: 20%;
+  height: 600px;
+  background: #DCE0D9;
+  float: left;
+
 
 }
 
@@ -14,17 +18,52 @@ header {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 500px;
+    height: 600px;
     width: 80%;
+    float: right;
 }
 
 header h1 {
   display: inline;
 }
 
-header h3 {
+header h4 {
+  font-weight: 300;
   display: inline;
   float: right;
   margin-right: 20px;
+
+}
+
+.team-controller {
+  position: absolute;
+  display: flex;
+  padding: 8px;
+  height: 44px;
+}
+
+.team-controller input[type=text] {
+  border-radius: 8px;
+  -webkit-appearance: none;
+  border: 0 none;
+  padding: 4px 10px 4px 10px;
+  width: 100%;
+  font-size: 16px;
+  -webkit-transform: translate(20px, 20px);
+  transform: translate(20px, 20px);
+}
+
+.team-controller .add {
+  width: 65px;
+  height: 65px;
+  margin-top: 5px;
+  margin-left: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: url('/images/plus-sign.svg');
+  -webkit-transform: translate(16px, 14px);
+  transform: translate(16px, 14px);
+
+  cursor: pointer;
 
 }
