@@ -5,13 +5,25 @@ body {
   background-attachment: fixed;
 }
 
+
 #container {
   width: 475px;
-  height: 300px;
+  height: 550px;
   background-color: #DCE0D9;
   margin: 0 auto;
   padding: 25px;
   padding-top: 15px;
+}
+
+#email {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  width: 450px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 
 #name {
@@ -22,6 +34,7 @@ body {
   height: 50px;
   font-size: 25px;
   font-weight: 300;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -37,7 +50,31 @@ body {
   margin-bottom: 10px;
 }
 
-#loginButton {
+#firstName {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  width: 450px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#lastName {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  width: 450px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#submitButton {
   padding-top: 2%;
   padding-bottom: 1%;
   border-radius: 10px;
