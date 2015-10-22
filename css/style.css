@@ -15,7 +15,7 @@ header {
   text-align: center;
   background: #DCE0D9;
   margin-top: 0;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 h1 {
@@ -24,4 +24,14 @@ h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   margin-top: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #BC261D;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #BC261D;
 }
