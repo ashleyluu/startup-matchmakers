@@ -24,12 +24,12 @@ var signupForm = function() {
   this.element.appendChild(this.button);
   this.element.appendChild(this.footer);
 
-  this.email.innerHTML = '<input type="email" placeholder="email address">';
-  this.username.innerHTML = '<input type="text" placeholder="username">';
-  this.password.innerHTML = '<input type="password" placeholder="password">';
-  this.firstName.innerHTML = '<input type="text" placeholder="first name">';
-  this.lastName.innerHTML = '<input type="text" placeholder="last name">';
-  this.button.innerHTML = '<button type="submit" value="Submit">create user</button>';
+  this.email.innerHTML = '<input type="email" id="email" placeholder="email address">';
+  this.username.innerHTML = '<input type="text" id="name" placeholder="username">';
+  this.password.innerHTML = '<input type="password" id="pass" placeholder="password">';
+  this.firstName.innerHTML = '<input type="text" id="firstName" placeholder="first name">';
+  this.lastName.innerHTML = '<input type="text" id="lastName" placeholder="last name">';
+  this.button.innerHTML = '<button type="submit" id="submitButton" value="Submit">create user</button>';
   this.footer.innerHTML = '<div class="footer"><a href="login.html">Already have an account?</a></div>';
 
 
