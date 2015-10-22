@@ -5,7 +5,6 @@ var loginForm = function() {
   this.button = document.createElement ('div');
   this.footer = document.createElement ('footer');
 
-
   this.element.appendChild(this.username);
   this.element.appendChild(this.password);
   this.element.appendChild(this.button);
@@ -19,30 +18,30 @@ var loginForm = function() {
   this.username.innerHTML = '<input type="text" id="name" placeholder="username">';
   this.password.innerHTML = '<input type="password" id="pass" placeholder="password">';
   this.button.innerHTML = '<button type="submit" id="loginButton" value="Submit">login</button>';
-  this.footer.innerHTML = '<div class="footer"><a href="login.html">Dont have an account?</a></div>';
+  this.footer.innerHTML = '<div class="footer"><a href="signup.html">Dont have an account?</a></div>';
 
   this.button.addEventListener('click', function(){
     var formName = document.getElementById('name').value;
     var formPassword = document.getElementById('pass').value;
 
-  var options = {
-    username: formName,
-    password: formPassword
-  };
+    var options = {
+      username: formName,
+      password: formPassword
+    };
 
-var request = $http('http://vvvvvv.club/api/login').post(options);
-// console.dir(request)
-request.then(function(response){
-  console.log(response)
-  window.location.href = "http://localhost:8080/views/team.html"
-    //   if(response === 200){
-    //   console.log(response);
-    // }
-});
+    var verify = new xhrHandler();
+    verify.request('POST','http://vvvvvv.club/api/login',options).then(function(res){
+      console.log(res)
+      window.location.pathname = "/views/team.html";
+    });
+    //.catch(function(err){
+      //throw "no";
 
+
+    //});
 
   });
-  //console.log('hi')
+
   document.getElementById('container').appendChild(this.element);
 
 };
