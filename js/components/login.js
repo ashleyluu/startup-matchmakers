@@ -30,11 +30,15 @@ var loginForm = function() {
     };
 
     var verify = new xhrHandler();
-    verify.request('POST','http://vvvvvv.club/api/login',options).catch(function(err){
-      // do stuff
-    }).then(function(res){
+    verify.request('POST','http://vvvvvv.club/api/login',options).then(function(res){
+      console.log(res)
       window.location.pathname = "/views/team.html";
     });
+    //.catch(function(err){
+      //throw "no";
+
+
+    //});
 
   });
 
