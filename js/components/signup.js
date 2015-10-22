@@ -32,12 +32,23 @@ var signupForm = function() {
   this.button.innerHTML = '<button type="submit" id="submitButton" value="Submit">create user</button>';
   this.footer.innerHTML = '<div class="footer"><a href="login.html">Already have an account?</a></div>';
 
+  this.button.addEventListener('click', function(){
+    var formName = document.getElementById('name').value;
+    var formPassword = document.getElementById('pass').value;
 
+    var options = {
+      username: formName,
+      password: formPassword
+    };
 
+    var verify = new xhrHandler();
+    verify.request('POST','http://vvvvvv.club/api/login',options).catch(function(err){
+      alert('Login unsuccessful');
+    }).then(function(res){
+      window.location.pathname = "/views/team.html";
+    });
 
-
-
-
+  });
 
 
   document.getElementById('container').appendChild(this.element);
