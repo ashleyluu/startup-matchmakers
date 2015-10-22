@@ -25,3 +25,13 @@ h1 {
   font-weight: 300;
   margin-top: 0px;
 }
+
+a {
+  text-decoration: none;
+  color: #BC261D;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #BC261D;
+}

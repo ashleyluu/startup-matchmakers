@@ -37,17 +37,34 @@ teamNameController.prototype.addList = function(teamName){
 
 
 
-
-
-
 //gallery-container
-var Gallery = function(){
+var Gallery = function(userCard){
   this.gallery = document.createElement('div');
   this.ul = document.createElement('ul');
 
 
   this.gallery.classList.add('gallery');
   this.gallery.appendChild(this.ul);
+
+var user = [{
+  username: 'whatever',
+  first: 'sdf'
+},
+  {username: 'sdfsd',
+  first: 'dfsdf'
+},
+  {username: '123',
+  first: 'dfs231df'
+}
+];
+
+for (i = 0; i < user.length; i++) {
+
+  var li = document.createElement('li');
+  li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
+  this.ul.appendChild(li);
+}
+
 
 document.getElementById('gallery-container').appendChild(this.gallery);
 
