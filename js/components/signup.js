@@ -25,7 +25,7 @@ var signupForm = function() {
   this.element.appendChild(this.footer);
 
   this.email.innerHTML = '<input type="email" id="email" placeholder="email address">';
-  this.username.innerHTML = '<input type="text" id="name" placeholder="username">';
+  this.username.innerHTML = '<input type="text" id="username" placeholder="username">';
   this.password.innerHTML = '<input type="password" id="pass" placeholder="password">';
   this.firstName.innerHTML = '<input type="text" id="firstName" placeholder="first name">';
   this.lastName.innerHTML = '<input type="text" id="lastName" placeholder="last name">';
@@ -33,18 +33,25 @@ var signupForm = function() {
   this.footer.innerHTML = '<div class="footer"><a href="login.html">Already have an account?</a></div>';
 
   this.button.addEventListener('click', function(){
-    var formName = document.getElementById('name').value;
+    var formEmail = document.getElementById('email').value;
+    var formUsername = document.getElementById('username').value;
     var formPassword = document.getElementById('pass').value;
+    var formFirst = document.getElementById('firstName').value;
+    var formLast = document.getElementById('lastName').value;
+
 
     var options = {
-      username: formName,
-      password: formPassword
+      emailAddress: formEmail,
+      username: formUsername,
+      password: formPassword,
+      First:formFirst,
+      Last: formLast
     };
 
-    var verify = new xhrHandler();
-    verify.request('POST','http://vvvvvv.club/api/login',options).catch(function(err){
-      alert('Login unsuccessful');
-    }).then(function(res){
+    var createID = new xhrHandler();
+    createID.request('POST','http://vvvvvv.club/api/user',options)//.catch(function(err){
+    //  alert('Login unsuccessful');
+    .then(function(res){
       window.location.pathname = "/views/team.html";
     });
 
