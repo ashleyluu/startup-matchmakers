@@ -4,14 +4,15 @@ header {
   color: #BC261D;
 }
 
+body {
+  margin: 0;
+}
 
 #nav {
   width: 20%;
   height: 900px;
   background: #DCE0D9;
   float: left;
-
-
 }
 
 #gallery-container {
@@ -22,6 +23,7 @@ header {
     height: 900px;
     width: 80%;
     float: right;
+    text-align: center;
 }
 
 header h1 {
@@ -89,8 +91,8 @@ ul {
 }
 
 li {
-  width: 30%;
-  height: 300px;
+  width: 29%;
+  height: 250px;
   background: #FFFFFF;
   border-radius: 8px;
   float: left;
