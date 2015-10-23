@@ -54,7 +54,7 @@ this.ul.appendChild(listItem);
 var Gallery = function(userCard){
   this.gallery = document.createElement('div');
   this.ul = document.createElement('ul');
-
+  var self=this;
 
   this.gallery.classList.add('gallery');
   this.gallery.appendChild(this.ul);
@@ -78,7 +78,31 @@ for (i = 0; i < user.length; i++) {
   li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
   this.ul.appendChild(li);
 }
+// var user = [{
+//   username: 'whatever',
+//   first: 'sdf'
+// },
+//   {username: 'sdfsd',
+//   first: 'dfsdf'
+// },
+//   {username: '123',
+//   first: 'dfs231df'
+// }
+// ];
 
+
+var user = new xhrHandler();
+user.request('POST', 'http://vvvvvv.club/api/login', {username:'admin', password:'password'}).then(function(){
+  user.request('GET','http://vvvvvv.club/api/user').then(function(user){
+    console.log(user)
+
+    for (i = 0; i < user.length; i++) {
+      var li = document.createElement('li');
+      li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
+      self.ul.appendChild(li);
+    }
+  });
+})
 
 document.getElementById('gallery-container').appendChild(this.gallery);
 
