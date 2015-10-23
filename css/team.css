@@ -90,15 +90,9 @@ ul {
   list-style-type: none;
 }
 
-<<<<<<< HEAD
 .galleryLi {
   width: 30%;
   height: 300px;
-=======
-li {
-  width: 29%;
-  height: 250px;
->>>>>>> master
   background: #FFFFFF;
   border-radius: 8px;
   float: left;
