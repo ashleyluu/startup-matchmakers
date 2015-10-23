@@ -13,10 +13,17 @@ var teamNameController = function(){
   this.controls = document.createElement('div');
   this.controls.classList.add('team-controller');
   this.controls.innerHTML = '<input type="text"><div class="add"></div>';
+  this.ul= document.createElement('ul');
+  this.controls.appendChild(this.ul);
+
 
   this.controls.querySelectorAll('input')[0].addEventListener('keydown', function(ev){
     if(ev.keyCode === 13) {
-      this.addList(this.controls.querySelectorAll('input')[0].value);
+      var item = {
+        content: this.controls.querySelectorAll('input')[0].value
+      };
+      this.addList(item);
+      //this.addList(this.controls.querySelectorAll('input')[0].value) ='';
       this.controls.querySelectorAll('input')[0].value = '';
     }
   }.bind(this));
@@ -25,14 +32,20 @@ var teamNameController = function(){
     this.addList(this.controls.querySelectorAll('input')[0].value);
     this.controls.querySelectorAll('input')[0].value = '';
   }.bind(this));
-
+//console.log('hi')
   document.getElementById('nav').appendChild(this.controls);
 
 };
 
-teamNameController.prototype.addList = function(teamName){
-  var teamList
+//adding team names to list- accordian exercise
+teamNameController.prototype.addList = function(item){
+  console.log(item)
+  var listItem = document.createElement('li');
+    listItem.innerHTML= item.content;
+    console.log(listItem)
+  //set content of li
 
+this.ul.appendChild(listItem);
 };
 
 
@@ -61,6 +74,7 @@ var user = [{
 for (i = 0; i < user.length; i++) {
 
   var li = document.createElement('li');
+  li.classList.add('galleryLi');
   li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
   this.ul.appendChild(li);
 }
