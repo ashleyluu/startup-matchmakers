@@ -11,20 +11,23 @@ body {
   width: 100%;
   margin-top: 4%;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 #matchContent {
   float: right;
-  width: 32%;
+  width: 30%;
   padding-bottom: 3%;
   margin-right: 3%;
   color: #DCE0D9;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 #meetMatch h1 {
   color: #DCE0D9;
   font-weight: 400;
+  font-size: 1.5em;
 }
 
 #meetMatch h3 {
@@ -38,12 +41,13 @@ body {
   border-radius: 10px;
   margin-right: 20px;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 1em;
 }
 
 #meetMatch h3 a {
   text-decoration: none;
   color: #DCE0D9;
+  cursor: pointer;
 }
 
 
@@ -52,9 +56,9 @@ body {
   background:#FFFFFF;
   width: 100%;
   height: 15%;
-  font-size: 1.8em;
-  padding-top: 0.75%;
-  padding-bottom: 1%;
+  font-size: 1em;
+  padding-top: 0.7%;
+  padding-bottom: 0.7%;
 }
 
 #tagLine h1 {
@@ -65,20 +69,20 @@ body {
 #createProfile {
   float: left;
   width: 30%;
-
+  font-size: 1em;
 }
 
 #findDeveloper {
   float: left;
   width: 30%;
   margin-left: 5%;
-
+  font-size: 1em;
 }
 
 #findDesigner {
   float: right;
   width: 30%;
-
+  font-size: 1em;
 }
 
 .moreInfo {
@@ -88,6 +92,7 @@ body {
   margin-right: 3%;
   display: inline-block;
   font-weight: 400;
+  font-size: 1em;
 }
 
 .moreInfo h1 {
@@ -98,7 +103,7 @@ body {
 
 .moreInfo p {
   color: #DCE0D9;
-  font-size: 25px;
+  font-size: 1em;
 }
 
 .moreInfo h3 {
@@ -108,11 +113,13 @@ body {
   border-radius: 10px;
   padding-top: 4px;
   padding-bottom: 8px;
-  font-size: 22px;
+  font-size: 1em;
 }
+
 .moreInfo h3 a{
   text-decoration: none;
   color: #DCE0D9;
+  cursor: pointer;
 }
 
 
@@ -123,8 +130,8 @@ footer {
   clear: both;
   margin-top: 5%;
   padding-top: 2%;
-  padding-bottom: 1%;
   text-align: center;
   background: #FFFFFF;
-  font-size: 1.5em;
+  font-size: 1em;
+  font-weight: 400;
 }

@@ -12,6 +12,27 @@ body {
   background-color: #DCE0D9;
   margin: 0 auto;
   padding: 1%;
+  text-align: center;
+}
+
+#avatar {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  border-radius: 50%;
+  width: 80%;
+  height: 13em;
+}
+
+#chooseFile {
+  padding-left: 3%;
+  border-radius: 10px;
+  width: 40%;
+  height: 1em;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: transparent;
+  float: left;
 }
 
 #email {
@@ -82,7 +103,7 @@ body {
   padding-top: 2%;
   padding-bottom: 1%;
   border-radius: 10px;
-  width: 94%;
+  width: 96%;
   height: 2em;
   text-align: center;
   font-size: 1em;
