@@ -48,7 +48,7 @@ teamNameController.prototype.addList = function(item){
 this.ul.appendChild(listItem);
 };
 
-
+//lolll
 
 //gallery-container
 var Gallery = function(userCard){
