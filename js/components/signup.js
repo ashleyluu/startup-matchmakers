@@ -28,6 +28,8 @@ var signupForm = function() {
   this.button.innerHTML = '<button type="submit" id="submitButton" value="Submit">create user</button>';
   this.footer.innerHTML = '<div class="footer"><a href="login.html">Already have an account?</a></div>';
 
+//Here are some more changes!!!!
+
   this.element.appendChild(this.avatar);
   this.element.appendChild(this.chooseFile);
   this.element.appendChild(this.email);
