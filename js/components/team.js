@@ -49,7 +49,6 @@ this.ul.appendChild(listItem);
 };
 
 
-
 //gallery-container
 var Gallery = function(userCard){
   this.gallery = document.createElement('div');
