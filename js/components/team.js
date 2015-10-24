@@ -60,37 +60,6 @@ var Gallery = function(userCard){
   this.gallery.classList.add('gallery');
   this.gallery.appendChild(this.ul);
 
-var user = [{
-  username: 'whatever',
-  first: 'sdf'
-},
-  {username: 'sdfsd',
-  first: 'dfsdf'
-},
-  {username: '123',
-  first: 'dfs231df'
-}
-];
-
-for (i = 0; i < user.length; i++) {
-
-  var li = document.createElement('li');
-  //li.classList.add('galleryLi');
-  li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
-  this.ul.appendChild(li);
-}
-// var user = [{
-//   username: 'whatever',
-//   first: 'sdf'
-// },
-//   {username: 'sdfsd',
-//   first: 'dfsdf'
-// },
-//   {username: '123',
-//   first: 'dfs231df'
-// }
-// ];
-
 
 var user = new xhrHandler();
 user.request('POST', 'http://vvvvvv.club/api/login', {username:'admin', password:'password'}).then(function(){
@@ -99,7 +68,10 @@ user.request('POST', 'http://vvvvvv.club/api/login', {username:'admin', password
 
     for (i = 0; i < user.length; i++) {
       var li = document.createElement('li');
-      li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
+      li.innerHTML = '<img class="avatar" src="http://vvvvvv.club'+user[i].avatar.image+'">' + '<h5> @' + user[i].username + '</h5>'
+      li.id = "dragged";
+      li.setAttribute("draggable", "true");
+      li.setAttribute("ondragstart", "event.dataTransfer.setData('text/plain',null)");
       self.ul.appendChild(li);
     }
   });
