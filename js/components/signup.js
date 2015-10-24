@@ -45,12 +45,11 @@ var signupForm = function() {
     var formFirst = document.getElementById('firstName').value;
     var formLast = document.getElementById('lastName').value;
 
-
     var options = {
       emailAddress: formEmail,
       username: formUsername,
       password: formPassword,
-      First:formFirst,
+      First: formFirst,
       Last: formLast
     };
 
