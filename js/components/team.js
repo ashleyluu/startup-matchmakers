@@ -12,7 +12,7 @@ var teamNameController = function(){
 
   this.controls = document.createElement('div');
   this.controls.classList.add('team-controller');
-  this.controls.innerHTML = '<input type="text"><div class="add"></div>';
+  this.controls.innerHTML = '<div class="wrapper"><input type="text"><div class="add"></div></div>';
   this.ul= document.createElement('ul');
   this.ul.classList.add('constructorNames')
   this.controls.appendChild(this.ul);

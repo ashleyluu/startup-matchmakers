@@ -10,7 +10,7 @@ body {
 
 #nav {
   width: 20%;
-  height: 900px;
+  height: 50%;
   background: #DCE0D9;
   float: left;
 }
@@ -20,7 +20,7 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 900px;
+    height: 100%;
     width: 80%;
     float: right;
     text-align: center;
@@ -48,28 +48,34 @@ h5 {
 
 .team-controller {
   position: absolute;
-  display: flex;
+  float:left;
   padding: 8px;
-  height: 44px;
+  height: 50px;
+  width: 18%;
 }
+.wrapper {
+  display: inline-block;
+  height: 60px;;
+  width: 100%;
 
+}
 .team-controller input[type=text] {
   border-radius: 8px;
   -webkit-appearance: none;
   border: 0 none;
   padding: 4px 10px 4px 10px;
-  width: 80%;
+  width: 60%;
+  height: 30px;
   font-size: 16px;
   -webkit-transform: translate(20px, 20px);
   transform: translate(20px, 20px);
-  float:left;
 }
 
 .team-controller .add {
   width: 50px;
   height: 50px;
-  float: left;
-  margin-left: 20px;
+  float: right;
+  margin-right:12px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/images/plus-sign.svg');
@@ -78,14 +84,15 @@ h5 {
   cursor: pointer;
 }
 .constructorNames {
-  padding-top:100px;
+  margin-top:30px;
+  margin-left:10px;
+  color: #BC261D;
 }
-.constructorNames ul {
-  width: 100%;
+
+.constructorNames li {
+
 }
-.constructorNames ul li{
-  color: #FFFFFF;
-}
+
 .avatar {
   border-radius: 50%;
   height: 150px;
