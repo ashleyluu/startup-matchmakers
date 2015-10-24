@@ -77,9 +77,13 @@ h5 {
   cursor: pointer;
 }
 .constructorNames {
-  clear:both;
   padding-top:100px;
-  background-color: #FFFFFF;
+}
+.constructorNames ul {
+  width: 100%;
+}
+.constructorNames ul li{
+  color: #FFFFFF;
 }
 .avatar {
   border-radius: 50%;
