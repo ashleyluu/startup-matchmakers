@@ -57,26 +57,28 @@ h5 {
   -webkit-appearance: none;
   border: 0 none;
   padding: 4px 10px 4px 10px;
-  width: 100%;
+  width: 80%;
   font-size: 16px;
   -webkit-transform: translate(20px, 20px);
   transform: translate(20px, 20px);
+  float:left;
 }
 
 .team-controller .add {
   width: 50px;
   height: 50px;
-  margin-top: 5px;
+  float: left;
   margin-left: 20px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/images/plus-sign.svg');
   -webkit-transform: translate(16px, 14px);
   transform: translate(16px, 14px);
-
   cursor: pointer;
 }
-
+.teams li {
+  clear: both;
+}
 .avatar {
   border-radius: 50%;
   height: 100px;
@@ -90,7 +92,7 @@ ul {
   list-style-type: none;
 }
 
-.galleryLi {
+.gallery li {
   width: 30%;
   height: 300px;
   background: #FFFFFF;
@@ -100,6 +102,6 @@ ul {
   color: #000000;
 }
 
-li img {
+.gallery img {
   text-align: center;
 }
