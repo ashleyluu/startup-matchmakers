@@ -14,6 +14,7 @@ var teamNameController = function(){
   this.controls.classList.add('team-controller');
   this.controls.innerHTML = '<input type="text"><div class="add"></div>';
   this.ul= document.createElement('ul');
+  this.ul.classList.add('constructorNames')
   this.controls.appendChild(this.ul);
 
 
@@ -41,6 +42,7 @@ var teamNameController = function(){
 teamNameController.prototype.addList = function(item){
   console.log(item)
   var listItem = document.createElement('li');
+    listItem.classList.add('teams')
     listItem.innerHTML= item.content;
     console.log(listItem)
   //set content of li
@@ -73,7 +75,7 @@ var user = [{
 for (i = 0; i < user.length; i++) {
 
   var li = document.createElement('li');
-  li.classList.add('galleryLi');
+  //li.classList.add('galleryLi');
   li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
   this.ul.appendChild(li);
 }
