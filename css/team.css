@@ -76,8 +76,10 @@ h5 {
   transform: translate(16px, 14px);
   cursor: pointer;
 }
-.teams li {
-  clear: both;
+.constructorNames {
+  clear:both;
+  padding-top:100px;
+  background-color: #FFFFFF;
 }
 .avatar {
   border-radius: 50%;
