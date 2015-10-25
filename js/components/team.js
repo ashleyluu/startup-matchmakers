@@ -64,7 +64,7 @@ var Gallery = function(){
         self.ul.appendChild(li);
 
         // drag and drop
-        li.addEventListener('dragstart', function(ev){
+        li.addEventListener("dragstart", function(ev){
           dragged = event.target;
           // make it half transparent
           event.target.style.opacity = .5;
@@ -76,31 +76,17 @@ var Gallery = function(){
         }, false);
 
         document.addEventListener("dragover", function( event ) {
-               // prevent default to allow drop
-            event.preventDefault();
+          // prevent default to allow drop
+          event.preventDefault();
         }, false);
-
-        // document.addEventListener("dragenter", function( event ) {
-        //     // highlight potential drop target when the draggable element enters
-        //       if ( event.target.className == "droppable" ) {
-        //           event.target.style.background = "red";
-        //       }
-        // }, false);
-        //
-        // document.addEventListener("dragleave", function( event ) {
-        //        // reset background of potential drop target when the draggable element leaves it
-        //        if ( event.target.className == "droppable" ) {
-        //            event.target.style.background = "purple";
-        //        }
-        // }, false);
 
         document.addEventListener("drop", function( event ) {
           // prevent default action (open as link for some elements)
            event.preventDefault();
-              // move dragged elem to the selected drop target
+            // move dragged elem to the selected drop target
             if ( event.target.className == "droppable" ) {
-                  event.target.appendChild(dragged);
-              }
+              event.target.appendChild(dragged);
+            }
         }, false);
       }
 

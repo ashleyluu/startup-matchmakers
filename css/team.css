@@ -123,6 +123,32 @@ ul {
 /*footer {
   clear: both;
   width: 100%;
+<<<<<<< HEAD
   text-align: center;
   background: #FFFFFF;
 }*/
+=======
+  border-bottom: solid #ffffff 1px;
+}
+
+.droppable div {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+}
+
+.droppable .avatar {
+  height: 35px;
+  width: 35px;
+  margin: 0;
+}
+
+.droppable h5 {
+  display: none;
+}
+
+.droppable li {
+  display: inline;
+  float: left;
+}
+>>>>>>> master
