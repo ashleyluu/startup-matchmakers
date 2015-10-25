@@ -110,10 +110,6 @@ ul {
 }
 
 .droppable {
-  display: flex;
-  justify-content:center;
-  align-content:center;
-  flex-direction:column;
   height: 60px;
   width: 100%;
   border-bottom: solid #ffffff 1px;
@@ -122,13 +118,15 @@ ul {
 .droppable div {
   display: inline;
   float: left;
+  margin-top: 20px;
   margin-left: 10px;
 }
 
 .droppable .avatar {
   height: 35px;
   width: 35px;
-  margin: 0;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 .droppable h5 {
