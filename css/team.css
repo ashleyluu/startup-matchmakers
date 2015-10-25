@@ -1,29 +1,12 @@
+body {
+  background: #DCE0D9;
+  margin: 0;
+}
+
 header {
   width: 100%;
   height: 100px;
   color: #BC261D;
-}
-
-body {
-  margin: 0;
-}
-
-#nav {
-  width: 20%;
-  height: 50%;
-  background: #DCE0D9;
-  float: left;
-}
-
-#gallery-container {
-    background-image: url('/images/pattern.svg');
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100%;
-    width: 80%;
-    float: right;
-    text-align: center;
 }
 
 header h1 {
@@ -35,7 +18,6 @@ header h4 {
   display: inline;
   float: right;
   margin-right: 20px;
-
 }
 
 h5 {
@@ -46,20 +28,31 @@ h5 {
   margin-top: 10px;
 }
 
-.team-controller {
-  position: absolute;
-  float:left;
-  padding: 8px;
-  height: 50px;
-  width: 18%;
+#gallery-container {
+  background-image: url('/images/pattern.svg');
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 80%;
+  float: right;
+  text-align: center;
 }
+
+#nav {
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+
 .wrapper {
   display: inline-block;
-  height: 60px;;
+  height: 60px;
   width: 100%;
-
 }
+
 .team-controller input[type=text] {
+  float: left;
   border-radius: 8px;
   -webkit-appearance: none;
   border: 0 none;
@@ -74,8 +67,8 @@ h5 {
 .team-controller .add {
   width: 50px;
   height: 50px;
-  float: right;
-  margin-right:12px;
+  float: left;
+  margin-left:5px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/images/plus-sign.svg');
@@ -83,14 +76,9 @@ h5 {
   transform: translate(16px, 14px);
   cursor: pointer;
 }
+
 .constructorNames {
-  margin-top:30px;
-  margin-left:10px;
   color: #BC261D;
-}
-
-.constructorNames li {
-
 }
 
 .avatar {
@@ -107,7 +95,7 @@ ul {
 }
 
 .gallery li {
-  width: 30%;
+  width: 29%;
   height: 300px;
   background: #FFFFFF;
   border-radius: 8px;
@@ -116,32 +104,33 @@ ul {
   color: #000000;
 }
 
-.gallery img {
-  text-align: center;
+.drag {
+  height: 10px;
+  width: 10px;
 }
 
-.drag {
-    height: 80px;
-    width: 100px;
-    background-color: blue;
-    border: 1px solid black;
-    color: #ccc;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-.drag2 {
-    height: 80px;
-    width: 80px;
-    background-color: green;
-    border: 1px solid black;
-    color: #ccc;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
 .droppable {
-    height: 160px;
-    width: 200px;
-    background-color: purple;
-    margin-bottom: 20px;
-    padding: 10px;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  height: 60px;
+  width: 100%;
+  border-bottom: solid #ffffff 1px;
+}
+
+.droppable div {
+  display: inline;
+  margin-left: 10px;
+}
+
+.droppable .avatar {
+  display: inline;
+  height: 45px;
+  width: 45px;
+  margin: 0;
+}
+
+.droppable h5 {
+  display: none;
 }
