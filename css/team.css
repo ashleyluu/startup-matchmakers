@@ -121,16 +121,21 @@ ul {
 
 .droppable div {
   display: inline;
+  float: left;
   margin-left: 10px;
 }
 
 .droppable .avatar {
-  display: inline;
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
   margin: 0;
 }
 
 .droppable h5 {
   display: none;
+}
+
+.droppable li {
+  display: inline;
+  float: left;
 }
