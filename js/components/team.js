@@ -1,22 +1,13 @@
-/*
-  var teamList = function(){
-  this.element = document.createElement('div');
-  this.ul = document.createElement('ul');
-
-  this.element.appendChild(this.ul);
-};
-*/
-
+// side nav
 var teamNameController = function(){
-  this.lists = [];
+  // this.lists = [];
 
   this.controls = document.createElement('div');
   this.controls.classList.add('team-controller');
   this.controls.innerHTML = '<div class="wrapper"><input type="text"><div class="add"></div></div>';
-  this.ul= document.createElement('ul');
+  this.ul = document.createElement('ul');
   this.ul.classList.add('constructorNames')
   this.controls.appendChild(this.ul);
-
 
   this.controls.querySelectorAll('input')[0].addEventListener('keydown', function(ev){
     if(ev.keyCode === 13) {
@@ -24,35 +15,36 @@ var teamNameController = function(){
         content: this.controls.querySelectorAll('input')[0].value
       };
       this.addList(item);
-      //this.addList(this.controls.querySelectorAll('input')[0].value) ='';
       this.controls.querySelectorAll('input')[0].value = '';
     }
   }.bind(this));
 
   this.controls.querySelectorAll('.add')[0].addEventListener('click', function(){
-    this.addList(this.controls.querySelectorAll('input')[0].value);
+    var item = {
+      content: this.controls.querySelectorAll('input')[0].value
+    };
+    this.addList(item);
     this.controls.querySelectorAll('input')[0].value = '';
   }.bind(this));
-//console.log('hi')
+
   document.getElementById('nav').appendChild(this.controls);
 
 };
 
-//adding team names to list- accordian exercise
-teamNameController.prototype.addList = function(item){
-  console.log(item)
-  var listItem = document.createElement('li');
-    listItem.classList.add('teams')
-    listItem.innerHTML= item.content;
-    console.log(listItem)
-  //set content of li
 
-this.ul.appendChild(listItem);
+// adding team names to list
+teamNameController.prototype.addList = function(item){
+  var teamName = document.createElement('div');
+    teamName.classList.add('droppable');
+    teamName.innerHTML = '<div>' + item.content + '</div>';
+
+  this.ul.appendChild(teamName);
+
 };
 
 
-//gallery-container
-var Gallery = function(userCard){
+// user gallery container
+var Gallery = function(){
   this.gallery = document.createElement('div');
   this.ul = document.createElement('ul');
   var self=this;
@@ -60,48 +52,58 @@ var Gallery = function(userCard){
   this.gallery.classList.add('gallery');
   this.gallery.appendChild(this.ul);
 
-var user = [{
-  username: 'whatever',
-  first: 'sdf'
-},
-  {username: 'sdfsd',
-  first: 'dfsdf'
-},
-  {username: '123',
-  first: 'dfs231df'
-}
-];
+  var user = new xhrHandler();
+  user.request('POST', 'http://vvvvvv.club/api/login', {username:'admin', password:'password'}).then(function(){
+    user.request('GET','http://vvvvvv.club/api/user').then(function(user){
 
-for (i = 0; i < user.length; i++) {
+      for (i = 0; i < user.length; i++) {
+        var li = document.createElement('li');
+        li.innerHTML = '<img class="avatar" src="http://vvvvvv.club' + user[i].avatar.image + '">' + '<h5> @' + user[i].username + '</h5>'
+        li.setAttribute("draggable", "true");
+        li.setAttribute("ondragstart", "event.dataTransfer.setData('text/plain',null)");
+        self.ul.appendChild(li);
 
-  var li = document.createElement('li');
-  //li.classList.add('galleryLi');
-  li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
-  this.ul.appendChild(li);
-}
-// var user = [{
-//   username: 'whatever',
-//   first: 'sdf'
-// },
-//   {username: 'sdfsd',
-//   first: 'dfsdf'
-// },
-//   {username: '123',
-//   first: 'dfs231df'
-// }
-// ];
+        // drag and drop
+        li.addEventListener('dragstart', function(ev){
+          dragged = event.target;
+          // make it half transparent
+          event.target.style.opacity = .5;
+        });
 
+        li.addEventListener("dragend", function( event ) {
+          // reset the transparency
+          event.target.style.opacity = "";
+        }, false);
 
-var user = new xhrHandler();
-user.request('POST', 'http://vvvvvv.club/api/login', {username:'admin', password:'password'}).then(function(){
-  user.request('GET','http://vvvvvv.club/api/user').then(function(user){
-    console.log(user)
+        document.addEventListener("dragover", function( event ) {
+               // prevent default to allow drop
+            event.preventDefault();
+        }, false);
 
-    for (i = 0; i < user.length; i++) {
-      var li = document.createElement('li');
-      li.innerHTML = '<div class="avatar"></div>' + '<h5> @' + user[i].username + '</h5>'
-      self.ul.appendChild(li);
-    }
+        // document.addEventListener("dragenter", function( event ) {
+        //     // highlight potential drop target when the draggable element enters
+        //       if ( event.target.className == "droppable" ) {
+        //           event.target.style.background = "red";
+        //       }
+        // }, false);
+        //
+        // document.addEventListener("dragleave", function( event ) {
+        //        // reset background of potential drop target when the draggable element leaves it
+        //        if ( event.target.className == "droppable" ) {
+        //            event.target.style.background = "purple";
+        //        }
+        // }, false);
+
+        document.addEventListener("drop", function( event ) {
+          // prevent default action (open as link for some elements)
+           event.preventDefault();
+              // move dragged elem to the selected drop target
+            if ( event.target.className == "droppable" ) {
+                  event.target.appendChild(dragged);
+              }
+        }, false);
+      }
+
   });
 })
 
