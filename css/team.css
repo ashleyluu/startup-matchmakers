@@ -1,17 +1,18 @@
 header {
   width: 100%;
-  height: 100px;
+  height: 80px;
   color: #BC261D;
+  margin-top: 25px;
 }
 
 body {
   margin: 0;
+  background: #DCE0D9;
 }
 
 #nav {
   width: 20%;
-  height: 50%;
-  background: #DCE0D9;
+  height: 900px;
   float: left;
 }
 
@@ -89,7 +90,7 @@ h5 {
 }
 
 .constructorNames li {
-
+  line-height: 1.5em;
 }
 
 .avatar {
@@ -117,4 +118,11 @@ ul {
 
 .gallery img {
   text-align: center;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  background: #FFFFFF;
 }
