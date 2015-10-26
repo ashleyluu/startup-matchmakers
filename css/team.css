@@ -110,7 +110,7 @@ ul {
 }
 
 .droppable {
-  height: 60px;
+  min-height: 60px;
   width: 100%;
   border-bottom: solid #ffffff 1px;
 }
@@ -136,4 +136,11 @@ ul {
 .droppable li {
   display: inline;
   float: left;
+}
+
+/* trying to find a way to style the teams to expand as you add avatars */
+.horizontal-wrap {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
 }

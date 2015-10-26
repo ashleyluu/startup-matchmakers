@@ -35,7 +35,7 @@ var teamNameController = function(){
 // adding team names to list
 teamNameController.prototype.addList = function(item){
   var teamName = document.createElement('div');
-    teamName.classList.add('droppable');
+    teamName.classList.add('droppable', 'horizontal-wrap');
     teamName.innerHTML = '<div>' + item.content + '</div>';
 
   this.ul.appendChild(teamName);
@@ -58,7 +58,7 @@ var Gallery = function(){
 
       for (i = 0; i < user.length; i++) {
         var li = document.createElement('li');
-        li.innerHTML = '<img class="avatar" src="http://vvvvvv.club' + user[i].avatar.image + '">' + '<h5> @' + user[i].username + '</h5>'
+        li.innerHTML = '<img class="avatar" draggable="false" src="http://vvvvvv.club' + user[i].avatar.image + '">' + '<h5> @' + user[i].username + '</h5>'
         li.setAttribute("draggable", "true");
         li.setAttribute("ondragstart", "event.dataTransfer.setData('text/plain',null)");
         self.ul.appendChild(li);
@@ -84,7 +84,8 @@ var Gallery = function(){
           // prevent default action (open as link for some elements)
            event.preventDefault();
             // move dragged elem to the selected drop target
-            if ( event.target.className == "droppable" ) {
+            // == looked only for things equal to droppable but indexOf looks for anything that is classed as droppable
+            if ( event.target.className.indexOf("droppable") >= 0) {
               event.target.appendChild(dragged);
             }
         }, false);
