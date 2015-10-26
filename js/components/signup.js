@@ -18,7 +18,7 @@ var signupForm = function() {
   this.button.classList.add('button');
   this.footer.classList.add('footer');
 
-  this.avatar.innerHTML = '<img id="avatar" src="images/ic_person_black_48px.svg" alt="Image preview">';
+  this.avatar.innerHTML = '<img id="avatar" src="/images/user_icon.png" alt="Image preview">';
   this.chooseFile.innerHTML = '<input id="chooseFile" type="file" accept="image" onchange="readURL(this)">';
   this.email.innerHTML = '<input type="email" id="email" placeholder="email address">';
   this.username.innerHTML = '<input type="text" id="username" placeholder="username">';
