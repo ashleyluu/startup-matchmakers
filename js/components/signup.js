@@ -46,16 +46,15 @@ var signupForm = function() {
     var formLast = document.getElementById('lastName').value;
 
     var options = {
-      emailAddress: formEmail,
+      email: formEmail,
       username: formUsername,
       password: formPassword,
-      First: formFirst,
-      Last: formLast
+      firstName: formFirst,
+      lastName: formLast
     };
 
     var createID = new xhrHandler();
-    createID.request('POST','http://vvvvvv.club/api/user',options)//.catch(function(err){
-    //  alert('Login unsuccessful');
+    createID.request('POST','http://vvvvvv.club/api/user',options)
     .then(function(res){
       window.location.pathname = "/views/team.html";
     });
