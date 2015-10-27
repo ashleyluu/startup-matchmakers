@@ -5,7 +5,6 @@ body {
   background-attachment: fixed;
 }
 
-
 #container {
   width: 20%;
   height: 55%;
@@ -21,6 +20,7 @@ body {
   border-radius: 50%;
   width: 14em;
   height: 14em;
+  object-fit: cover;
 }
 
 #chooseFile {
