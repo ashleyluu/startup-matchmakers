@@ -57,6 +57,7 @@ var Gallery = function(){
     user.request('GET','http://vvvvvv.club/api/user').then(function(user){
 
       for (i = 0; i < user.length; i++) {
+        if (user[i].avatar){
         var li = document.createElement('li');
         li.innerHTML = '<img class="avatar" draggable="false" src="http://vvvvvv.club' + user[i].avatar.image + '">' + '<h5> @' + user[i].username + '</h5>'
         li.setAttribute("draggable", "true");
@@ -89,6 +90,7 @@ var Gallery = function(){
               event.target.appendChild(dragged);
             }
         }, false);
+      }
       }
 
   });
