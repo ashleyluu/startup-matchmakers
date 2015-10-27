@@ -120,8 +120,13 @@ ul {
   text-align: center;
 }
 
+<<<<<<< HEAD
 /*footer {
   clear: both;
+=======
+.droppable {
+  min-height: 60px;
+>>>>>>> master
   width: 100%;
 <<<<<<< HEAD
   text-align: center;
@@ -134,13 +139,15 @@ ul {
 .droppable div {
   display: inline;
   float: left;
+  margin-top: 20px;
   margin-left: 10px;
 }
 
 .droppable .avatar {
   height: 35px;
   width: 35px;
-  margin: 0;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 .droppable h5 {
@@ -150,5 +157,15 @@ ul {
 .droppable li {
   display: inline;
   float: left;
+}
+<<<<<<< HEAD
+>>>>>>> master
+=======
+
+/* trying to find a way to style the teams to expand as you add avatars */
+.horizontal-wrap {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
 }
 >>>>>>> master
