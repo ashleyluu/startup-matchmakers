@@ -21,6 +21,7 @@ body {
   border-radius: 50%;
   width: 14em;
   height: 14em;
+  overflow: hidden;
 }
 
 #chooseFile {
